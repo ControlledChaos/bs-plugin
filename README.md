@@ -7,4 +7,6 @@ A basic starter plugin for WordPress and ClassicPress.
 ![PHP tested on version 7.2](https://img.shields.io/badge/PHP-tested%207.2-8892bf.svg?style=flat-square)
 ![ACF Pro Ready](https://img.shields.io/badge/ACF%20Pro-ready-00d3ae.svg?style=flat-square)
 
+See [BS Theme](https://github.com/ControlledChaos/bs-theme) for a basic WordPress/ClassicPress starter theme.
+
 ![BS Plugin Cover Image](https://raw.githubusercontent.com/ControlledChaos/bs-plugin/master/delete-me.jpg)
