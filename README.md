@@ -1,2 +1,3 @@
-# bs-plugin
-A basic starter plugin.
+#BS Plugin
+
+A basic starter plugin for WordPress and ClassicPress.
