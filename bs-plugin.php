@@ -59,11 +59,14 @@
  *    primary plugin file (this file).
  *
  * 3. Constants prefix
- *    Find `BSP` and replace with something unique to your plugin name. Use
+ *    Find `BSP_` and replace with something unique to your plugin name. Use
  *    only uppercase letters.
  *
+ *    NOTE: Make sure to include the underscore (_) in your search & replase
+ *    to ensure you won't disturb instances of the `ABSPATH` constant.
+ *
  * 4. General prefix
- *    Find `bsp` and replace with something unique to your plugin name. Use
+ *    Find `bsp_` and replace with something unique to your plugin name. Use
  *    only lowercase letters. This will change the prefix of all filters and
  *    settings, and the prefix of functions outside of a class.
  *
