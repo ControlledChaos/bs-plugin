@@ -22,7 +22,7 @@ if ( ! defined( 'WPINC' ) ) {
  * @since  1.0.0
  * @access public
  */
-class Controlled_Chaos_Activate {
+class BS_Plugin_Activate {
 
 	/**
 	 * Instance of the class
@@ -81,6 +81,6 @@ class Controlled_Chaos_Activate {
  */
 function bsp_activate() {
 
-	return Controlled_Chaos_Activate::instance();
+	return BS_Plugin_Activate::instance();
 
 }
