@@ -16,7 +16,9 @@
  * Author URI:   http://ccdzine.com/
  * Text Domain:  bs-plugin
  * Domain Path:  /languages
- * Tested up to: 5.6.0
+ * Requires PHP: 5.3
+ * Requires at least: 3.8
+ * Tested up to: 5.7.1
  */
 
 namespace BS_Plugin;
@@ -24,14 +26,44 @@ namespace BS_Plugin;
 // Alias namespaces.
 use BS_Plugin\Classes\Activate as Activate;
 
-/**
+ /**
  * License & Warranty
  *
- * BS Plugin is free software. It can be redistributed and/or modified
- * ad libidum. There is no license distributed with this product.
+ * BS Plugin is free software.
+ * It can be redistributed and/or modified ad libidum.
  *
- * BS Plugin is distributed WITHOUT ANY WARRANTY; without even the implied
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * BS Plugin is distributed WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.
+ */
+
+/**
+ * Author's Note
+ *
+ * To all who may read this,
+ *
+ * I hope you find this code to be easily deciphered. I have
+ * learned much by examining the code of well written & well
+ * documented products so I have done my best to document this
+ * code with comments where necessary, even where not necessary,
+ * and by using logical, descriptive names for PHP classes &
+ * methods, HTML IDs, CSS classes, etc.
+ *
+ * Beginners, note that the short array syntax ( `[]` rather than
+ * array()` ) is used. Use of the `array()` function is encouraged
+ * by some to make the code more easily read by beginners. I argue
+ * that beginners will inevitably encounter the short array syntax
+ * so they may as well learn to recognize this early. If the code
+ * is well documented then it will be clear when the brackets (`[]`)
+ * represent an array. And someday you too will be writing many
+ * arrays in your code and you will find the short syntax to be
+ * a time saver. Let's not unnecessarily dumb-down code; y'all
+ * are smart folk if you are reading this and you'll figure it out
+ * like I did.
+ *
+ * Greg Sweet, Controlled Chaos Design, former mule packer, cook,
+ * landscaper, & janitor who learned PHP by breaking stuff and by
+ * reading code comments.
  */
 
 /**
@@ -74,9 +106,8 @@ use BS_Plugin\Classes\Activate as Activate;
  *    only lowercase letters. This will change the prefix of all filters and
  *    settings, and the prefix of functions outside of a class.
  *
- * 8. Author
- *    Find `Greg Sweet <greg@ccdzine.com>` and replace with your name and
- *    email address or those of your organization.
+ * 8. Version `@since` number
+ *    Find `1.0.0` and replace with your starting version number.
  *
  * 9. Constants
  *    See the `includes/config.php` file to change developer/agency details,
@@ -123,10 +154,10 @@ include_once BS_PATH . 'activate/classes/class-activate.php';
 include_once BS_PATH . 'activate/classes/class-deactivate.php';
 
 /**
- * Register the activaction & deactivation hooks
+ * Register the activation & deactivation hooks
  *
  * The namspace of this file must remain escaped by use of the
- * backslash (`\`) prepending the acivation hooks and corresponding
+ * backslash (`\`) prepending the activation hooks and corresponding
  * functions.
  *
  * @since  1.0.0
@@ -137,7 +168,7 @@ include_once BS_PATH . 'activate/classes/class-deactivate.php';
 \register_deactivation_hook( __FILE__, __NAMESPACE__ . '\deactivate_plugin' );
 
 /**
- * Run activation class
+ * Activation callback
  *
  * The code that runs during plugin activation.
  *
@@ -146,12 +177,21 @@ include_once BS_PATH . 'activate/classes/class-deactivate.php';
  * @return void
  */
 function activate_plugin() {
-	Activate\activation_class();
+
+	// Instantiate the Activate class.
+	$activate = new Activate\Activate;
+
+	/**
+	 * Run methods from the Activate class.
+	 * For instance, the sample options method…
+	 */
+
+	// Add & update options.
+	$activate->options();
 }
-activate_plugin();
 
 /**
- * Run daactivation class
+ * Deactivation callback
  *
  * The code that runs during plugin deactivation.
  *
@@ -160,9 +200,12 @@ activate_plugin();
  * @return void
  */
 function deactivate_plugin() {
-	Activate\deactivation_class();
+
+	// Instantiate the Activate class.
+	$activate = new Activate\Deactivate;
+
+	// Run methods from the Deactivate class.
 }
-deactivate_plugin();
 
 /**
  * Disable plugin for PHP version

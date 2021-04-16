@@ -2,7 +2,7 @@
 /**
  * Plugin configuration
  *
- * The constants defined here do not override any default bavavior
+ * The constants defined here do not override any default behavior
  * or default user interfaces. However, the corresponding behavior
  * can be overridden in the system config file (e.g. `wp-config`,
  * `app-config` ).
@@ -96,7 +96,7 @@ if ( ! Classes\bs_php()->version() ) {
  * Constant: Plugin configuration.
  *
  * @since 1.0.0
- * @var   array Plugin identification, support, settintgs.
+ * @var   array Plugin identification, support, settings.
  */
 if ( ! defined( 'BS_CONFIG' ) ) {
 

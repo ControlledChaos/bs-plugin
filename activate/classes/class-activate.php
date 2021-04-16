@@ -46,6 +46,24 @@ class Activate {
 	}
 
 	/**
+	 * Add & update options
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return self
+	 */
+	public function options() {
+
+		// Add site options.
+		// add_option( 'option_name', 'default_value' );
+
+		// Add network options.
+		if ( is_multisite() ) {
+			// add_network_option( get_current_network_id(), 'option_name', 'default_value' );
+		}
+	}
+
+	/**
 	 * PHP deactivation notice: after plugin row
 	 *
 	 * @since  1.0.0
@@ -123,17 +141,4 @@ class Activate {
 	<?php
 
 	}
-}
-
-/**
- * Activate plugin
- *
- * Puts an instance of the class into a function.
- *
- * @since  1.0.0
- * @access public
- * @return object Returns an instance of the class.
- */
-function activation_class() {
-	return new Activate;
 }

@@ -11,30 +11,29 @@
 namespace BS_Plugin;
 
 // Alias namespaces.
-use
-BS_Plugin\Classes          as Classes,
-BS_Plugin\Classes\Core     as Core,
-BS_Plugin\Classes\Settings as Settings,
-BS_Plugin\Classes\Tools    as Tools,
-BS_Plugin\Classes\Media    as Media,
-BS_Plugin\Classes\Users    as Users,
-BS_Plugin\Classes\Admin    as Admin,
-BS_Plugin\Classes\Front    as Front,
-BS_Plugin\Classes\Vendor   as Vendor;
+use BS_Plugin\Classes as Classes;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
 
+// Hook initialization functions.
+add_action( 'init', __NAMESPACE__ . '\init' );
+add_action( 'admin_init', __NAMESPACE__ . '\admin_init' );
+
 /**
- * Load plugin text domain
+ * Initialization function
+ *
+ * Loads PHP classes and text domain.
+ * Instantiates various classes.
+ * Adds settings link in the plugin row.
  *
  * @since  1.0.0
  * @access public
  * @return void
  */
-function text_domain() {
+function init() {
 
 	// Standard plugin installation.
 	load_plugin_textdomain(
@@ -48,22 +47,6 @@ function text_domain() {
 		BS_CONFIG['domain'],
 		dirname( BS_BASENAME ) . '/languages'
 	);
-}
-
-/**
- * Core plugin function
- *
- * Loads and runs PHP classes.
- * Removes unwanted features.
- *
- * @since  1.0.0
- * @access public
- * @return void
- */
-function bs_plugin() {
-
-	// Load text domain. Hook to `init` rather than `plugins_loaded`.
-	add_action( 'init', __NAMESPACE__ . '\text_domain' );
 
 	/**
 	 * Class autoloader
@@ -74,5 +57,18 @@ function bs_plugin() {
 	require_once BS_PATH . 'includes/autoloader.php';
 }
 
-// Run the plugin.
-bs_plugin();
+/**
+ * Admin initialization function
+ *
+ * Instantiates various classes.
+ *
+ * @since  1.0.0
+ * @access public
+ * @global $pagenow Get the current admin screen.
+ * @return void
+ */
+function admin_init() {
+
+	// Access current admin page.
+	global $pagenow;
+}
