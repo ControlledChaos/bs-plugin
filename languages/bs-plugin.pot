@@ -1,0 +1,58 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BS Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-16 18:04+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.2; wp-5.7.1\n"
+"X-Domain: bs-plugin"
+
+#. Description of the plugin
+msgid ""
+"A basic starter plugin for ClassicPress, WordPress, and the antibrand system."
+msgstr ""
+
+#. Name of the plugin
+#: config.php:45
+msgid "BS Plugin"
+msgstr ""
+
+#: config.php:122
+msgid "Controlled Chaos"
+msgstr ""
+
+#. Author of the plugin
+msgid "Controlled Chaos Design"
+msgstr ""
+
+#: activate/classes/class-activate.php:107
+#: activate/classes/class-activate.php:133
+msgid "Functionality of the"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://ccdzine.com/"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/ControlledChaos/bs-plugin"
+msgstr ""
+
+#: activate/classes/class-activate.php:111
+#: activate/classes/class-activate.php:137
+msgid "or greater. Your system is running PHP version"
+msgstr ""
+
+#: activate/classes/class-activate.php:109
+#: activate/classes/class-activate.php:135
+msgid "plugin has been disabled because it requires PHP version"
+msgstr ""
