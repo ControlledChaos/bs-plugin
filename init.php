@@ -37,14 +37,14 @@ function init() {
 
 	// Standard plugin installation.
 	load_plugin_textdomain(
-		BS_CONFIG['domain'],
+		'bs-plugin',
 		false,
 		dirname( BS_BASENAME ) . '/languages'
 	);
 
 	// If this is in the must-use plugins directory.
 	load_muplugin_textdomain(
-		BS_CONFIG['domain'],
+		'bs-plugin',
 		dirname( BS_BASENAME ) . '/languages'
 	);
 

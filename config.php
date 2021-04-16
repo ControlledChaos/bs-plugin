@@ -30,25 +30,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Constant: Plugin version
  *
- * Keeping the version at 1.0.0 as this is a starter plugin but
- * you may want to start counting as you develop for your use case.
- *
- * Remember to find and replace the `@version x.x.x` in docblocks.
- *
  * @since 1.0.0
  * @var   string The latest plugin version.
  */
 define( 'BS_VERSION', '1.0.0' );
-
-/**
- * Constant: Text domain
- *
- * Remember to replace in the plugin header above.
- *
- * @since 1.0.0
- * @var   string The text domain of the plugin.
- */
-define( 'BS_DOMAIN', 'bs-plugin' );
 
 /**
  * Plugin name
@@ -57,7 +42,7 @@ define( 'BS_DOMAIN', 'bs-plugin' );
  * @var   string The name of the plugin.
  */
 if ( ! defined( 'BS_NAME' ) ) {
-	define( 'BS_NAME', __( 'BS Plugin', BS_DOMAIN ) );
+	define( 'BS_NAME', __( 'BS Plugin', 'bs-plugin' ) );
 }
 
 /**
@@ -119,14 +104,6 @@ if ( ! defined( 'BS_CONFIG' ) ) {
 		'php_version' => Classes\bs_php()->minimum(),
 
 		/**
-		 * Text domain
-		 *
-		 * @since 1.0.0
-		 * @var   string The text domain of the plugin.
-		 */
-		'domain' => BS_DOMAIN,
-
-		/**
 		 * Plugin name
 		 *
 		 * Remember to replace in the plugin header.
@@ -142,7 +119,7 @@ if ( ! defined( 'BS_CONFIG' ) ) {
 		 * @since 1.0.0
 		 * @var   string The name of the developer/agency.
 		 */
-		'dev_name' => __( 'Controlled Chaos', BS_DOMAIN ),
+		'dev_name' => __( 'Controlled Chaos', 'bs-plugin' ),
 
 		/**
 		 * Developer URL

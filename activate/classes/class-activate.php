@@ -88,27 +88,27 @@ class Activate {
 
 			<?php if ( isset( $plugin_data['update'] ) && ! empty( $plugin_data['update'] ) ) : ?>
 
-				.plugins tr.<?php echo BS_DOMAIN; ?>-plugin-tr td {
+				.plugins tr.<?php echo 'bs-plugin'; ?>-plugin-tr td {
 					box-shadow: none ! important;
 				}
 
-				.plugins tr.<?php echo BS_DOMAIN; ?>-plugin-tr .update-message {
+				.plugins tr.<?php echo 'bs-plugin'; ?>-plugin-tr .update-message {
 					margin-bottom: 0;
 				}
 
 			<?php endif; ?>
 		</style>
 
-		<tr id="plugin-php-notice" class="plugin-update-tr active <?php echo BS_DOMAIN; ?>-plugin-tr">
+		<tr id="plugin-php-notice" class="plugin-update-tr active <?php echo 'bs-plugin'; ?>-plugin-tr">
 			<td colspan="<?php echo $colspan; ?>" class="plugin-update colspanchange">
 				<div class="update-message notice inline notice-error notice-alt">
 					<?php echo sprintf(
 						'<p>%s %s %s %s %s %s</p>',
-						__( 'Functionality of the', BS_DOMAIN ),
+						__( 'Functionality of the', 'bs-plugin' ),
 						BS_NAME,
-						__( 'plugin has been disabled because it requires PHP version', BS_DOMAIN ),
+						__( 'plugin has been disabled because it requires PHP version', 'bs-plugin' ),
 						Classes\bs_php()->minimum(),
-						__( 'or greater. Your system is running PHP version', BS_DOMAIN ),
+						__( 'or greater. Your system is running PHP version', 'bs-plugin' ),
 						phpversion()
 					); ?>
 				</div>
@@ -130,11 +130,11 @@ class Activate {
 		<div id="plugin-php-notice" class="notice notice-error is-dismissible">
 			<?php echo sprintf(
 				'<p>%s %s %s %s %s %s</p>',
-				__( 'Functionality of the', BS_DOMAIN ),
+				__( 'Functionality of the', 'bs-plugin' ),
 				BS_NAME,
-				__( 'plugin has been disabled because it requires PHP version', BS_DOMAIN ),
+				__( 'plugin has been disabled because it requires PHP version', 'bs-plugin' ),
 				bs_php()->minimum(),
-				__( 'or greater. Your system is running PHP version', BS_DOMAIN ),
+				__( 'or greater. Your system is running PHP version', 'bs-plugin' ),
 				phpversion()
 			); ?>
 		</div>
